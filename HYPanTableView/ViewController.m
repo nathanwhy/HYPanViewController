@@ -148,11 +148,12 @@
         default: { // end
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:sourceIndexPath];
             
-            if (fabsf(movePoint.x)>100) {
+            if (fabsf(movePoint.x) > kScreenWidth*0.3) {
                 [UIView animateWithDuration:0.4 animations:^{
                     
                     CGFloat offsetX = movePoint.x>0?kScreenWidth:-kScreenWidth;
                     CGAffineTransform transform = CGAffineTransformIdentity;
+                    offsetX *= 1.2f;
                     transform = CGAffineTransformRotate(transform,(M_PI/180.0*(offsetX/kScreenWidth)*20));
                     transform = CGAffineTransformTranslate(transform, offsetX, 0);
                     [snapshot setTransform:transform];
@@ -188,7 +189,7 @@
 
 - (void)pushToDetailViewController{
     DetailViewController *toVC = [[DetailViewController alloc] init];
-    [toVC showDetailControllerFromRight:NO];
+    [toVC showDetailController];
 }
 
 

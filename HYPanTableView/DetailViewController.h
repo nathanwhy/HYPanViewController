@@ -10,6 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
-- (void)showDetailControllerFromRight:(BOOL)right;
+- (void)showDetailController;
 
 @end

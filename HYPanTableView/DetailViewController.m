@@ -46,7 +46,7 @@
     
 }
 
-- (void)showDetailControllerFromRight:(BOOL)right
+- (void)showDetailController
 {
     UIApplication *app = [UIApplication sharedApplication];
     UIWindow *window = app.keyWindow;
