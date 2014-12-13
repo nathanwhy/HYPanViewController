@@ -23,21 +23,21 @@
     self.view.backgroundColor = [UIColor grayColor];
     
     UITextView *textView = [[UITextView alloc] init];
-    textView.frame = CGRectMake(10, -150, self.view.frame.size.width-20, 160);
+    textView.frame = CGRectMake(10, -180, self.view.frame.size.width-20, 180);
     textView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:textView];
     
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cancelBtn setTitle:@"cancel" forState:UIControlStateNormal];
     [cancelBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [cancelBtn setFrame:CGRectMake(0, textView.frame.size.height-20, 60, 20)];
+    [cancelBtn setFrame:CGRectMake(0, textView.frame.size.height-30, 60, 30)];
     [cancelBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [textView addSubview:cancelBtn];
     
     UIButton *commitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [commitBtn setTitle:@"send" forState:UIControlStateNormal];
     [commitBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [commitBtn setFrame:CGRectMake(textView.frame.size.width-60, textView.frame.size.height-20, 60, 20)];
+    [commitBtn setFrame:CGRectMake(textView.frame.size.width-60, textView.frame.size.height-30, 60, 30)];
     [commitBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [textView addSubview:commitBtn];
     
@@ -59,14 +59,14 @@
 
 - (void)showView{
     [UIView animateWithDuration:0.3 animations:^{
-         _textView.transform = CGAffineTransformMakeTranslation(0, 200);
+         _textView.transform = CGAffineTransformMakeTranslation(0, 210);
     }];
     [_textView becomeFirstResponder];
 }
 
 - (void)back{
     [UIView animateWithDuration:0.3 animations:^{
-        _textView.transform = CGAffineTransformMakeTranslation(0, -200);
+        _textView.transform = CGAffineTransformMakeTranslation(0, -210);
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
         [self removeFromParentViewController];

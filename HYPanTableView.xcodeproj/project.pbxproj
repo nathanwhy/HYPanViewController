@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B34EBC31A39529F0005B663 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBC21A39529E0005B663 /* main.m */; };
-		6B34EBC61A39529F0005B663 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBC51A39529F0005B663 /* AppDelegate.m */; };
-		6B34EBC91A39529F0005B663 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBC81A39529F0005B663 /* ViewController.m */; };
-		6B34EBCE1A39529F0005B663 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B34EBCD1A39529F0005B663 /* Images.xcassets */; };
-		6B34EBD11A39529F0005B663 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B34EBCF1A39529F0005B663 /* LaunchScreen.xib */; };
 		6B34EBDD1A39529F0005B663 /* HYPanTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBDC1A39529F0005B663 /* HYPanTableViewTests.m */; };
-		6B34EBE81A39A9270005B663 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBE71A39A9270005B663 /* DetailViewController.m */; };
+		D8AADA311A3C9479002C2EEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA271A3C9479002C2EEA /* AppDelegate.m */; };
+		D8AADA321A3C9479002C2EEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA281A3C9479002C2EEA /* LaunchScreen.xib */; };
+		D8AADA331A3C9479002C2EEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2B1A3C9479002C2EEA /* DetailViewController.m */; };
+		D8AADA341A3C9479002C2EEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA2C1A3C9479002C2EEA /* Images.xcassets */; };
+		D8AADA351A3C9479002C2EEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA2D1A3C9479002C2EEA /* Info.plist */; };
+		D8AADA361A3C9479002C2EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2E1A3C9479002C2EEA /* main.m */; };
+		D8AADA371A3C9479002C2EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA301A3C9479002C2EEA /* ViewController.m */; };
+		D8AADA3B1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,19 +30,21 @@
 
 /* Begin PBXFileReference section */
 		6B34EBBD1A39529E0005B663 /* HYPanTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYPanTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B34EBC11A39529E0005B663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B34EBC21A39529E0005B663 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B34EBC41A39529F0005B663 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6B34EBC51A39529F0005B663 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B34EBC71A39529F0005B663 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B34EBC81A39529F0005B663 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6B34EBCD1A39529F0005B663 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6B34EBD01A39529F0005B663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6B34EBD61A39529F0005B663 /* HYPanTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYPanTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B34EBDB1A39529F0005B663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B34EBDC1A39529F0005B663 /* HYPanTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPanTableViewTests.m; sourceTree = "<group>"; };
-		6B34EBE61A39A9270005B663 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		6B34EBE71A39A9270005B663 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D8AADA261A3C9479002C2EEA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8AADA271A3C9479002C2EEA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8AADA291A3C9479002C2EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D8AADA2A1A3C9479002C2EEA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D8AADA2B1A3C9479002C2EEA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D8AADA2C1A3C9479002C2EEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D8AADA2D1A3C9479002C2EEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8AADA2E1A3C9479002C2EEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8AADA2F1A3C9479002C2EEA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D8AADA301A3C9479002C2EEA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D8AADA391A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPanGestureRecognizer+HYAdditon.h"; sourceTree = "<group>"; };
+		D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPanGestureRecognizer+HYAdditon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,7 @@
 		6B34EBB41A39529E0005B663 = {
 			isa = PBXGroup;
 			children = (
-				6B34EBBF1A39529E0005B663 /* HYPanTableView */,
+				D8AADA251A3C9479002C2EEA /* HYPanTableViewDemo */,
 				6B34EBD91A39529F0005B663 /* HYPanTableViewTests */,
 				6B34EBBE1A39529E0005B663 /* Products */,
 			);
@@ -77,31 +81,6 @@
 				6B34EBD61A39529F0005B663 /* HYPanTableViewTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6B34EBBF1A39529E0005B663 /* HYPanTableView */ = {
-			isa = PBXGroup;
-			children = (
-				6B34EBC41A39529F0005B663 /* AppDelegate.h */,
-				6B34EBC51A39529F0005B663 /* AppDelegate.m */,
-				6B34EBC71A39529F0005B663 /* ViewController.h */,
-				6B34EBC81A39529F0005B663 /* ViewController.m */,
-				6B34EBE61A39A9270005B663 /* DetailViewController.h */,
-				6B34EBE71A39A9270005B663 /* DetailViewController.m */,
-				6B34EBCD1A39529F0005B663 /* Images.xcassets */,
-				6B34EBCF1A39529F0005B663 /* LaunchScreen.xib */,
-				6B34EBC01A39529E0005B663 /* Supporting Files */,
-			);
-			path = HYPanTableView;
-			sourceTree = "<group>";
-		};
-		6B34EBC01A39529E0005B663 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B34EBC11A39529E0005B663 /* Info.plist */,
-				6B34EBC21A39529E0005B663 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6B34EBD91A39529F0005B663 /* HYPanTableViewTests */ = {
@@ -120,6 +99,33 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		D8AADA251A3C9479002C2EEA /* HYPanTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8AADA381A3C948B002C2EEA /* HYPanGestureRecognizer */,
+				D8AADA261A3C9479002C2EEA /* AppDelegate.h */,
+				D8AADA271A3C9479002C2EEA /* AppDelegate.m */,
+				D8AADA2F1A3C9479002C2EEA /* ViewController.h */,
+				D8AADA301A3C9479002C2EEA /* ViewController.m */,
+				D8AADA2A1A3C9479002C2EEA /* DetailViewController.h */,
+				D8AADA2B1A3C9479002C2EEA /* DetailViewController.m */,
+				D8AADA2C1A3C9479002C2EEA /* Images.xcassets */,
+				D8AADA281A3C9479002C2EEA /* LaunchScreen.xib */,
+				D8AADA2D1A3C9479002C2EEA /* Info.plist */,
+				D8AADA2E1A3C9479002C2EEA /* main.m */,
+			);
+			path = HYPanTableViewDemo;
+			sourceTree = "<group>";
+		};
+		D8AADA381A3C948B002C2EEA /* HYPanGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				D8AADA391A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.h */,
+				D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */,
+			);
+			path = HYPanGestureRecognizer;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -201,8 +207,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B34EBD11A39529F0005B663 /* LaunchScreen.xib in Resources */,
-				6B34EBCE1A39529F0005B663 /* Images.xcassets in Resources */,
+				D8AADA321A3C9479002C2EEA /* LaunchScreen.xib in Resources */,
+				D8AADA341A3C9479002C2EEA /* Images.xcassets in Resources */,
+				D8AADA351A3C9479002C2EEA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,10 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B34EBC91A39529F0005B663 /* ViewController.m in Sources */,
-				6B34EBC61A39529F0005B663 /* AppDelegate.m in Sources */,
-				6B34EBC31A39529F0005B663 /* main.m in Sources */,
-				6B34EBE81A39A9270005B663 /* DetailViewController.m in Sources */,
+				D8AADA311A3C9479002C2EEA /* AppDelegate.m in Sources */,
+				D8AADA3B1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m in Sources */,
+				D8AADA361A3C9479002C2EEA /* main.m in Sources */,
+				D8AADA371A3C9479002C2EEA /* ViewController.m in Sources */,
+				D8AADA331A3C9479002C2EEA /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +254,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6B34EBCF1A39529F0005B663 /* LaunchScreen.xib */ = {
+		D8AADA281A3C9479002C2EEA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B34EBD01A39529F0005B663 /* Base */,
+				D8AADA291A3C9479002C2EEA /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -337,7 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HYPanTableView/Info.plist;
+				INFOPLIST_FILE = HYPanTableViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,7 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HYPanTableView/Info.plist;
+				INFOPLIST_FILE = HYPanTableViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
