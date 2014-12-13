@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol HYPanGestureRecognizerDelegate <NSObject>
-
-@required
-- (CALayer *)panGestureRecognizerWithLeftLayer;
-- (CALayer *)panGestureRecognizerWithRightLayer;
-@end
-
 @interface UIPanGestureRecognizer (HYAdditon)
 
 -(void)hy_PanGestureWithTableView:(UITableView *)tableView
