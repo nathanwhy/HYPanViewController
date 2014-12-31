@@ -10,6 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
-- (void)showDetailController;
 
+- (void)back;
 @end

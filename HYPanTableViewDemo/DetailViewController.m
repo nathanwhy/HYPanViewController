@@ -44,18 +44,10 @@
     
     _textView = textView;
     
+    [self showView];
+    
 }
 
-- (void)showDetailController
-{
-    UIApplication *app = [UIApplication sharedApplication];
-    UIWindow *window = app.keyWindow;
-    [window addSubview:self.view];
-    
-    [window.rootViewController addChildViewController:self];
-    
-    [self showView];
-}
 
 - (void)showView{
     [UIView animateWithDuration:0.3 animations:^{

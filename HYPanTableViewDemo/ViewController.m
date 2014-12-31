@@ -102,14 +102,18 @@
 
 - (void)panGesture:(UIPanGestureRecognizer *)gesture
 {
+    __weak ViewController *weakSelf = self;
     [gesture hy_PanGestureWithTableView:self.tableView
-                            shadowWidth:0.5
+                            shadowWidth:1.0
                               leftLayer:self.leftLayer
                              rightLayer:self.rightLayer
                              completion:^(BOOL finished, BOOL isLeft) {
-        
-        DetailViewController *toVC = [[DetailViewController alloc] init];
-        [toVC showDetailController];
+                                 
+         NSLog(@"%@",isLeft?@"left":@"right");
+         DetailViewController *de = [[DetailViewController alloc] init];
+         
+         [weakSelf addChildViewController:de];
+         [weakSelf.view addSubview:de.view];
     }];
 }
 
