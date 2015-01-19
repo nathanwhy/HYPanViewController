@@ -60,6 +60,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         _textView.transform = CGAffineTransformMakeTranslation(0, -210);
     } completion:^(BOOL finished) {
+        [self willMoveToParentViewController:nil];
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
     }];

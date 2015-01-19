@@ -62,7 +62,6 @@
         cell.textLabel.numberOfLines = 0;
     }
     cell.textLabel.text = self.dataList[indexPath.row%7];
-    cell.backgroundView = nil;
     cell.backgroundColor = (indexPath.row%2)? DF_Color_RGB(156, 96, 34):DF_Color_RGB(196, 156, 107);
     
     return cell;
@@ -110,10 +109,11 @@
                              completion:^(BOOL finished, BOOL isLeft) {
                                  
          NSLog(@"%@",isLeft?@"left":@"right");
-         DetailViewController *de = [[DetailViewController alloc] init];
+         DetailViewController *detail = [[DetailViewController alloc] init];
          
-         [weakSelf addChildViewController:de];
-         [weakSelf.view addSubview:de.view];
+         [weakSelf addChildViewController:detail];
+         [weakSelf.view addSubview:detail.view];
+         [detail didMoveToParentViewController:weakSelf];
     }];
 }
 
