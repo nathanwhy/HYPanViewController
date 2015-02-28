@@ -8,18 +8,13 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
-#import "UIPanGestureRecognizer+HYAdditon.h"
-
+#import "HYPanGestureRecognizer.h"
 
 #define DF_Color_RGB(a,b,c) [UIColor colorWithRed:a/255.0f green:b/255.0f blue:c/255.0f alpha:1]
 @interface ViewController ()
 
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)NSArray *dataList;
-@property (nonatomic, weak)CATextLayer *leftLayer;
-@property (nonatomic, weak)CATextLayer *rightLayer;
-
-
 @end
 
 @implementation ViewController
@@ -34,11 +29,6 @@
                       @"A little more than kin, and less than kind. ",
                       @"no zuo no die"];
     
-    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGesture:)];
-    panRecognizer.delaysTouchesBegan = YES;
-    [self.view addGestureRecognizer:panRecognizer];
-    
-    
     _tableView = ({
         UITableView *tableview  = [[UITableView alloc] initWithFrame:self.view.frame];
         tableview.delegate = self;
@@ -47,11 +37,25 @@
         [self.view addSubview:tableview];
         tableview;
     });
+    
+    __weak ViewController *weakSelf = self;
+    HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(BOOL isFinished, BOOL isLeft) {
+        
+        DetailViewController *detail = [[DetailViewController alloc] init];
+        [weakSelf addChildViewController:detail];
+        [weakSelf.view addSubview:detail.view];
+        [detail didMoveToParentViewController:weakSelf];
+    }];
+    [self.view addGestureRecognizer:pan];
 }
 
-
+#pragma mark - tableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 30;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellid = @"cell";
@@ -67,55 +71,7 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 90;
-}
 
-- (CATextLayer *)createTextLayerWithRight:(BOOL)isRight
-{
-    CATextLayer *textlayer = [CATextLayer layer];
-    
-    textlayer = [CATextLayer layer];
-    textlayer.bounds = CGRectMake(0, 0, 30,20);
-    textlayer.font = (__bridge CFTypeRef)(@"Helvetica-Bold");
-    textlayer.fontSize = 15.0;
-    textlayer.foregroundColor = [UIColor redColor].CGColor;
-    textlayer.string = isRight?@"评论":@"转发";
-    return textlayer;
-}
-
-- (CATextLayer *)leftLayer{
-    if (_leftLayer == nil) {
-        _leftLayer = [self createTextLayerWithRight:NO];
-    }
-    return _leftLayer;
-}
-
-- (CATextLayer *)rightLayer{
-    if (_rightLayer == nil) {
-        _rightLayer = [self createTextLayerWithRight:YES];
-    }
-    return _rightLayer;
-}
-
-- (void)panGesture:(UIPanGestureRecognizer *)gesture
-{
-    __weak ViewController *weakSelf = self;
-    [gesture hy_PanGestureWithTableView:self.tableView
-                            shadowWidth:1.0
-                              leftLayer:self.leftLayer
-                             rightLayer:self.rightLayer
-                             completion:^(BOOL finished, BOOL isLeft) {
-                                 
-         NSLog(@"%@",isLeft?@"left":@"right");
-         DetailViewController *detail = [[DetailViewController alloc] init];
-         
-         [weakSelf addChildViewController:detail];
-         [weakSelf.view addSubview:detail.view];
-         [detail didMoveToParentViewController:weakSelf];
-    }];
-}
 
 
 @end

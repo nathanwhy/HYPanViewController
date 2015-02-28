@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B34EBDD1A39529F0005B663 /* HYPanTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B34EBDC1A39529F0005B663 /* HYPanTableViewTests.m */; };
+		9607F4D71AA1A7BC00943169 /* HYSnapshotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9607F4D61AA1A7BC00943169 /* HYSnapshotView.m */; };
+		9607F4DD1AA1AFD800943169 /* HYPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9607F4DC1AA1AFD800943169 /* HYPanGestureRecognizer.m */; };
 		D8AADA311A3C9479002C2EEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA271A3C9479002C2EEA /* AppDelegate.m */; };
 		D8AADA321A3C9479002C2EEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA281A3C9479002C2EEA /* LaunchScreen.xib */; };
 		D8AADA331A3C9479002C2EEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2B1A3C9479002C2EEA /* DetailViewController.m */; };
@@ -15,7 +17,6 @@
 		D8AADA351A3C9479002C2EEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA2D1A3C9479002C2EEA /* Info.plist */; };
 		D8AADA361A3C9479002C2EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2E1A3C9479002C2EEA /* main.m */; };
 		D8AADA371A3C9479002C2EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA301A3C9479002C2EEA /* ViewController.m */; };
-		D8AADA3B1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,10 @@
 		6B34EBD61A39529F0005B663 /* HYPanTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYPanTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B34EBDB1A39529F0005B663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B34EBDC1A39529F0005B663 /* HYPanTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPanTableViewTests.m; sourceTree = "<group>"; };
+		9607F4D51AA1A7BC00943169 /* HYSnapshotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYSnapshotView.h; sourceTree = "<group>"; };
+		9607F4D61AA1A7BC00943169 /* HYSnapshotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYSnapshotView.m; sourceTree = "<group>"; };
+		9607F4DB1AA1AFD800943169 /* HYPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPanGestureRecognizer.h; sourceTree = "<group>"; };
+		9607F4DC1AA1AFD800943169 /* HYPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPanGestureRecognizer.m; sourceTree = "<group>"; };
 		D8AADA261A3C9479002C2EEA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8AADA271A3C9479002C2EEA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D8AADA291A3C9479002C2EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,8 +48,6 @@
 		D8AADA2E1A3C9479002C2EEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8AADA2F1A3C9479002C2EEA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D8AADA301A3C9479002C2EEA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D8AADA391A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPanGestureRecognizer+HYAdditon.h"; sourceTree = "<group>"; };
-		D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPanGestureRecognizer+HYAdditon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +124,10 @@
 		D8AADA381A3C948B002C2EEA /* HYPanGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				D8AADA391A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.h */,
-				D8AADA3A1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m */,
+				9607F4D51AA1A7BC00943169 /* HYSnapshotView.h */,
+				9607F4D61AA1A7BC00943169 /* HYSnapshotView.m */,
+				9607F4DB1AA1AFD800943169 /* HYPanGestureRecognizer.h */,
+				9607F4DC1AA1AFD800943169 /* HYPanGestureRecognizer.m */,
 			);
 			path = HYPanGestureRecognizer;
 			sourceTree = SOURCE_ROOT;
@@ -228,10 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8AADA311A3C9479002C2EEA /* AppDelegate.m in Sources */,
-				D8AADA3B1A3C948B002C2EEA /* UIPanGestureRecognizer+HYAdditon.m in Sources */,
 				D8AADA361A3C9479002C2EEA /* main.m in Sources */,
 				D8AADA371A3C9479002C2EEA /* ViewController.m in Sources */,
+				9607F4D71AA1A7BC00943169 /* HYSnapshotView.m in Sources */,
 				D8AADA331A3C9479002C2EEA /* DetailViewController.m in Sources */,
+				9607F4DD1AA1AFD800943169 /* HYPanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
