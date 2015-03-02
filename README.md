@@ -1,6 +1,6 @@
 HYPanViewController
 ===================
-The ViewController that imitates the vvebo app.
+The ViewController that recreate the vvebo app.
 
 ![image](https://github.com/nathanwhy/HYPanViewController/raw/master/example.gif)
 
