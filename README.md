@@ -8,7 +8,7 @@ Some ideas come from [Udo](https://github.com/moayes/UDo/tree/master) .
 
 ###use
 
-```
+```objc
  __weak ViewController *weakSelf = self;
     HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(BOOL isFinished, BOOL isLeft) {
         
