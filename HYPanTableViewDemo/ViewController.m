@@ -46,6 +46,7 @@
         [weakSelf.view addSubview:detail.view];
         [detail didMoveToParentViewController:weakSelf];
     }];
+    [pan addLeftText:@"comment" rightText:@"retweet"];
     [self.view addGestureRecognizer:pan];
 }
 

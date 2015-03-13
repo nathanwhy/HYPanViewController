@@ -20,6 +20,6 @@ typedef void(^HYPanBlock)(BOOL isFinished, BOOL isLeft);
 @property (nonatomic, strong) CATextLayer *leftLayer;
 @property (nonatomic, strong) CATextLayer *rightLayer;
 
-
+- (void)addLeftText:(NSString *)leftText rightText:(NSString *)rightText;
 
 @end

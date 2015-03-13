@@ -8,6 +8,8 @@
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kPanFontSize 15.0f
+
 
 #import "HYPanGestureRecognizer.h"
 #import "HYSnapshotView.h"
@@ -34,28 +36,34 @@
     return self;
 }
 
-- (CATextLayer*)createLayer:(BOOL)isLeft{
+- (CATextLayer*)createLayerWithText:(NSString *)text{
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:kPanFontSize] constrainedToSize:CGSizeMake(100, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     CATextLayer *layer = [CATextLayer layer];
-    layer.bounds = CGRectMake(0, 0, 30,20);
-    layer.font = (__bridge CFTypeRef)(@"Helvetica-Bold");
-    layer.fontSize = 15.0;
+    layer.bounds = CGRectMake(0, 0, size.width, size.height);
+    layer.font = (__bridge CFTypeRef)[UIFont systemFontOfSize:kPanFontSize].fontName;
+    layer.fontSize = kPanFontSize;
     layer.foregroundColor = [UIColor redColor].CGColor;
-    layer.string = isLeft? @"评论": @"转发";
+    layer.string = text;
     return layer;
 }
 
 - (CATextLayer *)leftLayer{
     if (_leftLayer == nil) {
-        _leftLayer = [self createLayer:YES];
+        _leftLayer = [self createLayerWithText:@"leftText"];
     }
     return _leftLayer;
 }
 
 - (CATextLayer *)rightLayer{
     if (_rightLayer == nil) {
-        _rightLayer = [self createLayer:NO];
+        _rightLayer = [self createLayerWithText:@"rightText"];
     }
     return _rightLayer;
+}
+
+- (void)addLeftText:(NSString *)leftText rightText:(NSString *)rightText {
+    _leftLayer = [self createLayerWithText:leftText];
+    _rightLayer = [self createLayerWithText:rightText];
 }
 
 
