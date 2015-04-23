@@ -6,7 +6,7 @@ The ViewController that recreates the vvebo app UI.
 
 
 
-###use
+###Usage
 
 You can use `handler` to present new view controller:
 
