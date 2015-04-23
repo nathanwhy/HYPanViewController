@@ -31,12 +31,12 @@ It also can be used to delete Cell:
 typeof(self) __weak weakSelf = self;
 HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
         
-        if (isLeft) {
+        if (!isLeft) {
             [weakSelf.dataList removeObjectAtIndex:indexpath.row];
             [panGesture.tableView deleteRowsAtIndexPaths:@[indexpath] withRowAnimation:UITableViewRowAnimationFade];
         }
     }];
-[pan addLeftText:@"comment" rightText:@"retweet"];
+[pan addLeftText:@"comment" rightText:@"delete"];
 [self.view addGestureRecognizer:pan];
 ```
 
