@@ -12,7 +12,7 @@ You can use `handler` to present new view controller:
 
 ```objc
 typeof(self) __weak weakSelf = self;
-    HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
+HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
         
         if (isLeft) {
             DetailViewController *detail = [[DetailViewController alloc] init];
@@ -21,23 +21,23 @@ typeof(self) __weak weakSelf = self;
             [detail didMoveToParentViewController:weakSelf];
         }
     }];
-    [pan addLeftText:@"comment" rightText:@"retweet"];
-    [self.view addGestureRecognizer:pan];
+[pan addLeftText:@"comment" rightText:@"retweet"];
+[self.view addGestureRecognizer:pan];
 ```
 
 It also can be used to delete Cell:
 
 ```objc
 typeof(self) __weak weakSelf = self;
-    HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
+HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
         
         if (isLeft) {
             [weakSelf.dataList removeObjectAtIndex:indexpath.row];
             [panGesture.tableView deleteRowsAtIndexPaths:@[indexpath] withRowAnimation:UITableViewRowAnimationFade];
         }
     }];
-    [pan addLeftText:@"comment" rightText:@"retweet"];
-    [self.view addGestureRecognizer:pan];
+[pan addLeftText:@"comment" rightText:@"retweet"];
+[self.view addGestureRecognizer:pan];
 ```
 
 
