@@ -14,7 +14,6 @@
 		D8AADA321A3C9479002C2EEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA281A3C9479002C2EEA /* LaunchScreen.xib */; };
 		D8AADA331A3C9479002C2EEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2B1A3C9479002C2EEA /* DetailViewController.m */; };
 		D8AADA341A3C9479002C2EEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA2C1A3C9479002C2EEA /* Images.xcassets */; };
-		D8AADA351A3C9479002C2EEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8AADA2D1A3C9479002C2EEA /* Info.plist */; };
 		D8AADA361A3C9479002C2EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA2E1A3C9479002C2EEA /* main.m */; };
 		D8AADA371A3C9479002C2EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AADA301A3C9479002C2EEA /* ViewController.m */; };
 /* End PBXBuildFile section */
@@ -176,7 +175,7 @@
 		6B34EBB51A39529E0005B663 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = nathanwu;
 				TargetAttributes = {
 					6B34EBBC1A39529E0005B663 = {
@@ -214,7 +213,6 @@
 			files = (
 				D8AADA321A3C9479002C2EEA /* LaunchScreen.xib in Resources */,
 				D8AADA341A3C9479002C2EEA /* Images.xcassets in Resources */,
-				D8AADA351A3C9479002C2EEA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

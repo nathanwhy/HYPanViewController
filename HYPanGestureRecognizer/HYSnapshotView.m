@@ -12,21 +12,14 @@
 
 + (UIView *)customSnapshoFromView:(UIView *)inputView
 {
-    UIView *snapShot;
+    UIView *snapShot = [[UIView alloc] initWithFrame:inputView.frame];
+    UIGraphicsBeginImageContextWithOptions(inputView.bounds.size, YES, 1);
+    [inputView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
-    if ([[UIDevice currentDevice].systemVersion floatValue]<7.0f) {//ios6
-        snapShot = [[UIView alloc] initWithFrame:inputView.frame];
-        UIGraphicsBeginImageContextWithOptions(inputView.bounds.size, YES, 1);
-        [inputView.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        UIImageView *shot = [[UIImageView alloc]initWithImage:viewImage];
-        [snapShot addSubview:shot];
-        
-    }else {
-        snapShot = [inputView snapshotViewAfterScreenUpdates:YES];// ios7 Later
-    }
+    UIImageView *shot = [[UIImageView alloc]initWithImage:viewImage];
+    [snapShot addSubview:shot];
     snapShot.layer.masksToBounds = NO;
     snapShot.layer.cornerRadius = 0.0;
     snapShot.layer.shadowOpacity = 0.4;

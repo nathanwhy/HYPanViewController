@@ -14,37 +14,48 @@
 @interface ViewController ()
 
 @property (nonatomic, strong)UITableView *tableView;
-@property (nonatomic, strong)NSArray *dataList;
+@property (nonatomic, strong)NSMutableArray *dataList;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataList = @[@"Beauty! Where is thy faith?",
+    self.dataList = [NSMutableArray arrayWithArray:@[@"Beauty! Where is thy faith?",
                       @"Keep up your bright swords, for the dew will rust them. ",
                       @"O, she dothe teach the torches to burn bright! ",
                       @"Nothing will come of nothing. ",
                       @"This above all: to thine self be true.",
                       @"A little more than kin, and less than kind. ",
-                      @"no zuo no die"];
+                      @"no zuo no die",
+                      @"Beauty! Where is thy faith?",
+                      @"Keep up your bright swords, for the dew will rust them. ",
+                      @"O, she dothe teach the torches to burn bright! ",
+                      @"Nothing will come of nothing. ",
+                      @"This above all: to thine self be true.",
+                      @"A little more than kin, and less than kind. "]];
     
     _tableView = ({
         UITableView *tableview  = [[UITableView alloc] initWithFrame:self.view.frame];
         tableview.delegate = self;
         tableview.dataSource = self;
-        tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableview];
         tableview;
     });
     
-    __weak ViewController *weakSelf = self;
-    HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(BOOL isFinished, BOOL isLeft) {
+    typeof(self) __weak weakSelf = self;
+    HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:_tableView Handler:^(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft) {
         
-        DetailViewController *detail = [[DetailViewController alloc] init];
-        [weakSelf addChildViewController:detail];
-        [weakSelf.view addSubview:detail.view];
-        [detail didMoveToParentViewController:weakSelf];
+        if (isLeft) {
+            [weakSelf.dataList removeObjectAtIndex:indexpath.row];
+            [panGesture.tableView deleteRowsAtIndexPaths:@[indexpath] withRowAnimation:UITableViewRowAnimationFade];
+        }else{
+            DetailViewController *detail = [[DetailViewController alloc] init];
+            [weakSelf addChildViewController:detail];
+            [weakSelf.view addSubview:detail.view];
+            [detail didMoveToParentViewController:weakSelf];
+        }
     }];
     [pan addLeftText:@"comment" rightText:@"retweet"];
     [self.view addGestureRecognizer:pan];
@@ -52,7 +63,7 @@
 
 #pragma mark - tableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return [self.dataList count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,8 +77,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.numberOfLines = 0;
     }
-    cell.textLabel.text = self.dataList[indexPath.row%7];
-    cell.backgroundColor = (indexPath.row%2)? DF_Color_RGB(156, 96, 34):DF_Color_RGB(196, 156, 107);
+    cell.textLabel.text = self.dataList[indexPath.row];
+    cell.backgroundColor = DF_Color_RGB(245, 240, 235);
     
     return cell;
 }

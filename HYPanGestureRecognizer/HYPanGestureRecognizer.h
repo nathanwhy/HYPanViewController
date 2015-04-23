@@ -9,13 +9,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^HYPanBlock)(BOOL isFinished, BOOL isLeft);
+@class HYPanGestureRecognizer;
 
+typedef void(^HYHandler)(HYPanGestureRecognizer *panGesture, NSIndexPath *indexpath, BOOL isLeft);
 
 @interface HYPanGestureRecognizer : UIPanGestureRecognizer
-- (instancetype)initWithTabelView:(UITableView *)tableView Handler:(HYPanBlock) block;
+- (instancetype)initWithTabelView:(UITableView *)tableView Handler:(HYHandler) handler;
 
-@property (nonatomic, copy) HYPanBlock panBlock;
+@property (nonatomic, copy) HYHandler panHandler;
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) CATextLayer *leftLayer;
 @property (nonatomic, strong) CATextLayer *rightLayer;
