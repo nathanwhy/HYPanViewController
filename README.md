@@ -41,4 +41,4 @@ HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:
 ```
 
 
-Some ideas come from [Udo](https://github.com/moayes/UDo/tree/master) .
+This project is inspired by [Udo](https://github.com/moayes/UDo/tree/master) .
