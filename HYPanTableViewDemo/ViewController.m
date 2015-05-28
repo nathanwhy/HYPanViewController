@@ -39,7 +39,6 @@
         UITableView *tableview  = [[UITableView alloc] initWithFrame:self.view.frame];
         tableview.delegate = self;
         tableview.dataSource = self;
-//        tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableview];
         tableview;
     });
