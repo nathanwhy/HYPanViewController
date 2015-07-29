@@ -31,14 +31,6 @@
 
 @implementation HYPanGestureRecognizer
 
-- (instancetype)initWithTarget:(id)target action:(SEL)action{
-    self = [super initWithTarget:target action:action];
-    if (self) {
-        
-    }
-    return self;
-}
-
 - (instancetype)initWithTabelView:(UITableView *)tableView Handler:(HYHandler) handler
 {
     self = [self initWithTarget:self action:@selector(hy_handleAction:)];
@@ -140,10 +132,10 @@
                 typeof(self) __weak weakSelf = self;
                 [UIView animateWithDuration:0.4 animations:^{
                     
-                    CGFloat offsetX = movePoint.x>0?kScreenWidth:-kScreenWidth;
+                    CGFloat offsetX = movePoint.x > 0? kScreenWidth: -kScreenWidth;
                     CGAffineTransform transform = CGAffineTransformIdentity;
                     offsetX *= 1.2f;
-                    transform = CGAffineTransformRotate(transform,(M_PI/180.0*(offsetX/kScreenWidth)*20));
+                    transform = CGAffineTransformRotate(transform,(M_PI / 180.0 * (offsetX / kScreenWidth) * 20));
                     transform = CGAffineTransformTranslate(transform, offsetX, 0);
                     [snapshot setTransform:transform];
                     [snapshot setAlpha:1];

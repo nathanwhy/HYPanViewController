@@ -3,7 +3,7 @@ HYPanViewController
 The ViewController that recreates the vvebo app UI.
 The Awesome way to delete tableView cell or present new viewController.
 
-![image](https://github.com/nathanwhy/HYPanViewController/raw/master/example.gif)
+![image](https://github.com/nathanwhy/HYPanViewController/raw/master/screenshot.gif)
 
 
 
@@ -25,6 +25,7 @@ HYPanGestureRecognizer *pan = [[HYPanGestureRecognizer alloc] initWithTabelView:
 [pan addLeftText:@"comment" rightText:@"retweet"];
 [self.view addGestureRecognizer:pan];
 ```
+
 
 It also can be used to delete Cell:
 
