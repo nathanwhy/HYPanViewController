@@ -20,14 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
-#define kPanFontSize 15.0f
-
-
 #import "HYPanGestureRecognizer.h"
 #import "HYSnapshotView.h"
+
+static CGFloat const kPanFontSize = 15.0f;
+
+static inline CGFloat angleWithOffsetX(CGFloat x, CGFloat viewWidth){
+    return (M_PI / 180.0 * (x / viewWidth) * 20);
+}
 
 @implementation HYPanGestureRecognizer
 
@@ -77,6 +77,7 @@
 {
     CGPoint movePoint = [self translationInView:self.tableView];
     CGPoint location  = [self locationInView:self.tableView];
+    CGFloat viewWidth = self.tableView.frame.size.width;
     
     static NSIndexPath  *sourceIndexPath = nil;
     static UIView       *snapshot        = nil;
@@ -98,7 +99,7 @@
             
             
             self.rightLayer.anchorPoint = CGPointMake(0, 0.5);
-            self.rightLayer.position = CGPointMake(kScreenWidth + 10, cellH / 2);
+            self.rightLayer.position = CGPointMake(viewWidth + 10, cellH / 2);
             [snapshot.layer addSublayer:self.rightLayer];
             
             isFirstTouch = YES;
@@ -119,7 +120,7 @@
         case UIGestureRecognizerStateChanged:{
             
             CGAffineTransform transform = CGAffineTransformIdentity;
-            transform = CGAffineTransformRotate(transform,(M_PI/180.0*(movePoint.x/kScreenWidth)*20));
+            transform = CGAffineTransformRotate(transform, angleWithOffsetX(movePoint.x, viewWidth));
             transform = CGAffineTransformTranslate(transform, movePoint.x, 0);
             snapshot.transform = transform;
             
@@ -128,14 +129,14 @@
         default: { // end
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:sourceIndexPath];
             
-            if (fabs(movePoint.x) > kScreenWidth*0.3) {
+            if (fabs(movePoint.x) > viewWidth*0.3) {
                 typeof(self) __weak weakSelf = self;
                 [UIView animateWithDuration:0.4 animations:^{
                     
-                    CGFloat offsetX = movePoint.x > 0? kScreenWidth: -kScreenWidth;
+                    CGFloat offsetX = movePoint.x > 0? viewWidth: -viewWidth;
                     CGAffineTransform transform = CGAffineTransformIdentity;
                     offsetX *= 1.2f;
-                    transform = CGAffineTransformRotate(transform,(M_PI / 180.0 * (offsetX / kScreenWidth) * 20));
+                    transform = CGAffineTransformRotate(transform, angleWithOffsetX(offsetX, viewWidth));
                     transform = CGAffineTransformTranslate(transform, offsetX, 0);
                     [snapshot setTransform:transform];
                     [snapshot setAlpha:1];
